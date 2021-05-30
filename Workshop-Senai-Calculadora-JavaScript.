@@ -1,0 +1,58 @@
+
+@@ -0,0 +1,56 @@
+do{   
+    var valor = Number(prompt("Digite um número"));
+   do{     
+       var operacao = Number(prompt(`Digite a operação que deseja fazer 
+       Digite ( 1 ) para somar(+)
+       Digite ( 2 ) para Subtrair(-)
+       Digite ( 3 ) para multiplicar(*)
+       Digite ( 4 ) para dividir(/)`));
+       var numero2 = Number(prompt("Digite o proximo número"));
+
+
+
+       switch (operacao) {  
+           case 1: 
+                valor =  valor + numero2;
+                   alert(valor)
+               break;
+           case 2:
+                valor =  valor - numero2;
+                   alert(valor)
+               break;
+           case 3:
+                valor =  valor * numero2;
+                   alert(valor)
+               break;
+           case 4:
+                valor =  valor / numero2;
+                   alert(valor);
+               break;
+           default:
+                   alert("Alternativa invalida")
+               break;
+       }
+        var Reset = false;
+        var AdicionarValor = false;
+
+       var escolha = Number(prompt(`Digite ( 0 ) para fazer uma proxima operação com o valor obtido anteriormente
+       Digite( 1 ) para zerar a calculadora
+       Digite( 2 ) para sair`))
+
+       switch (escolha) {
+       case 0:
+            AdicionarValor = true;
+           break;
+       case 1:
+            Reset = true;
+           break;
+       case 2:
+           break;
+       default:
+           alert("Alternativa invalida")
+           break;
+       }
+
+   }while (AdicionarValor == true)
+}while (Reset == true)
